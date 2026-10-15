@@ -25,6 +25,7 @@
                     src="images/logo.png"
                     alt="Logo de SEGAG"
                     class="logo-empresa"
+                    style="max-width: 300px; height: auto;"
                 />
                 <h1>
                     <strong>SEGAG </strong> <br />Asesoramiento Integral de
@@ -253,29 +254,37 @@
             </div>
         </section>
 
-        <!-- Estilos para el efecto al pasar el cursor (Hover) y grosor original -->
+       <!-- Estilos personalizados -->
         <style>
-            #four,
-            #footer {
-                background-color: hsl(
-                    183,
-                    67%,
-                    28%
-                ) !important; /* Color sólido unificado para ambas secciones */
-                background-image: none !important;
+            /* 1. Sección Nuestros Servicios (Negro -> Gris -> Negro) */
+            #two {
+                background: linear-gradient(180deg, #000000 0%, #222222 50%, #000000 100%) !important;
             }
+
+            /* 2. Contacto: fundido suave de negro a verde bosque */
+            #four {
+                background: linear-gradient(180deg, #000000 0%, #080e09 45%, #14271a 76%, #21452c 100%) !important;
+                background-attachment: scroll !important; /* Asegura que el negro empiece arriba de esta sección */
+                margin-bottom: 0 !important;
+            }
+
+            /* 3. El pie mantiene el verde final del degradado */
+            #footer {
+                background-color: #21452c !important;
+                background-image: none !important;
+                margin-top: 0 !important;
+            }
+
+            /* Botones de contacto */
             .btn-contacto {
                 color: #ffffff !important;
-                border: 1px solid rgba(255, 255, 255, 0.6) !important; /* Grosor fino original */
+                border: 1px solid rgba(255, 255, 255, 0.6) !important;
                 background-color: transparent !important;
-                transition:
-                    background-color 0.25s ease,
-                    color 0.25s ease,
-                    border-color 0.25s ease;
+                transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
             }
             .btn-contacto:hover {
-                background-color: #ffffff !important; /* Se llena de blanco al pasar el cursor */
-                color: #3b7bb3 !important; /* El texto cambia al color de fondo */
+                background-color: #ffffff !important;
+                color: #3b7bb3 !important;
                 border-color: #ffffff !important;
             }
         </style>
