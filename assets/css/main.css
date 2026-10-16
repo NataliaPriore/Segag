@@ -3125,37 +3125,24 @@ button:disabled,
     padding: 9em 0 9em 0;
     background-color: #1a1a1a;
     color: rgba(255, 255, 255, 0.75);
-    /* La capa de fundido (primera) va con "scroll" para quedar pegada al borde inferior del header */
-    background-attachment: scroll, fixed, fixed, fixed;
+    background-attachment: scroll, fixed;
     background-image:
-        /* Fundido vertical a negro en la base, para empalmar con la sección siguiente */
         linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0) 55%,
             rgba(0, 0, 0, 0.6) 85%,
             #000000 100%
         ),
-        url("images/overlay2.png"),
-        url("images/overlay3.svg"),
-        /* Degradado horizontal en lugar de diagonal */
         linear-gradient(
-                0deg,
-                #000000 0%,
-                #333333 15%,
-                #666666 30%,
-                #4fa49a 65%,
-                #4361c2 100%
-            );
-    background-position:
-        bottom center,
-        top left,
-        center center,
-        center center;
-    background-size:
-        100% 100%,
-        auto,
-        cover,
-        cover;
+            0deg,
+            #000000 0%,
+            #333333 15%,
+            #666666 30%,
+            #4fa49a 65%,
+            #4361c2 100%
+        );
+    background-position: bottom center, center center;
+    background-size: 100% 100%, cover;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -3270,13 +3257,7 @@ button:disabled,
 }
 
 #header .actions:after {
-    background: #ffffff;
-    content: "";
-    height: 100vh;
-    left: 50%;
-    position: absolute;
-    top: 100%;
-    width: 1px;
+    display: none;
 }
 
 #header .inner {
