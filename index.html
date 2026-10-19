@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
 	Photon by HTML5 UP
 	html5up.net | @ajlkn
@@ -18,18 +18,34 @@
         /></noscript>
     </head>
     <body class="is-preload">
+        <img
+            id="logo-fixed"
+            src="images/logoB.png"
+            alt="Logo de SEGAG"
+            style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10001;
+                transform-origin: 0 0;
+                pointer-events: none;
+                visibility: hidden;
+            "
+        />
+
         <!-- Header -->
         <section id="header">
             <div class="inner">
                 <img
+                    id="logo-slot"
                     src="images/logo.png"
-                    alt="Logo de SEGAG"
-                    class="logo-empresa"
-                    style="max-width: 300px; height: auto;"
+                    alt=""
+                    aria-hidden="true"
+                    style="width: 400px; max-width: 100%; height: auto"
                 />
                 <h1>
-                    <strong>SEGAG </strong> <br />Asesoramiento Integral de
-                    Higiene, <br />
+                    <strong>SEGAG -</strong> Asesoramiento Integral de Higiene,
+                    <br />
                     Seguridad y Medio Ambiente en el trabajo <br />
                 </h1>
                 <p style="font-size: 1.4em">Tu Empresa, Nuestro Compromiso</p>
@@ -97,15 +113,19 @@
                 <div class="row gtr-150">
                     <!-- Servicio 1: Seguridad en el Trabajo -->
                     <div class="col-4 col-12-medium">
-                        <span
-                            class="icon solid style1 major fa-shield-alt"
-                        ></span>
-                        <h3>Seguridad en el Trabajo</h3>
-                        <p style="min-height: 4.5em">
-                            Diseñamos e implementamos planes preventivos
-                            orientados a la reducción de riesgos y la prevención
-                            de siniestros laborales:
-                        </p>
+                        <div class="service-heading">
+                            <span
+                                class="icon solid style1 major fa-shield-alt"
+                            ></span>
+                            <div class="service-copy">
+                                <h3>Seguridad en el Trabajo</h3>
+                                <p style="min-height: 4.5em">
+                                    Diseñamos e implementamos planes preventivos
+                                    orientados a la reducción de riesgos y la
+                                    prevención de siniestros laborales:
+                                </p>
+                            </div>
+                        </div>
                         <ul>
                             <li>
                                 Asesoramiento técnico-legal según Ley 19.587.
@@ -131,13 +151,20 @@
 
                     <!-- Servicio 2: Higiene Industrial -->
                     <div class="col-4 col-12-medium">
-                        <span class="icon solid style2 major fa-flask"></span>
-                        <h3>Higiene Industrial</h3>
-                        <p style="min-height: 4.5em">
-                            Ejecutamos estudios y protocolizaciones de campo
-                            conforme a los requerimientos oficiales de la
-                            Superintendencia de Riesgos del Trabajo (SRT):
-                        </p>
+                        <div class="service-heading">
+                            <span
+                                class="icon solid style2 major fa-flask"
+                            ></span>
+                            <div class="service-copy">
+                                <h3>Higiene Industrial</h3>
+                                <p style="min-height: 4.5em">
+                                    Ejecutamos estudios y protocolizaciones de
+                                    campo conforme a los requerimientos oficiales
+                                    de la Superintendencia de Riesgos del Trabajo
+                                    (SRT):
+                                </p>
+                            </div>
+                        </div>
                         <ul>
                             <li>
                                 Mediciones de Nivel Sonoro Continuo Equivalente
@@ -164,14 +191,20 @@
 
                     <!-- Servicio 3: Medio Ambiente -->
                     <div class="col-4 col-12-medium">
-                        <span class="icon solid style3 major fa-leaf"></span>
-                        <h3>Gestión Ambiental</h3>
-                        <p style="min-height: 4.5em">
-                            Desarrollamos e implementamos estrategias integrales
-                            de desarrollo sustentable para asegurar el
-                            cumplimiento del marco regulatorio ambiental
-                            vigente:
-                        </p>
+                        <div class="service-heading">
+                            <span
+                                class="icon solid style3 major fa-leaf"
+                            ></span>
+                            <div class="service-copy">
+                                <h3>Gestión Ambiental</h3>
+                                <p style="min-height: 4.5em">
+                                    Desarrollamos e implementamos estrategias
+                                    integrales de desarrollo sustentable para
+                                    asegurar el cumplimiento del marco
+                                    regulatorio ambiental vigente:
+                                </p>
+                            </div>
+                        </div>
                         <ul>
                             <li>
                                 Estudios de Impacto Ambiental (EIA) y
@@ -254,16 +287,27 @@
             </div>
         </section>
 
-       <!-- Estilos personalizados -->
+        <!-- Estilos personalizados -->
         <style>
             /* 1. Sección Nuestros Servicios (Negro -> Gris -> Negro) */
             #two {
-                background: linear-gradient(180deg, #000000 0%, #222222 50%, #000000 100%) !important;
+                background: linear-gradient(
+                    180deg,
+                    #000000 0%,
+                    #222222 50%,
+                    #000000 100%
+                ) !important;
             }
 
             /* 2. Contacto: fundido suave de negro a verde bosque */
             #four {
-                background: linear-gradient(180deg, #000000 0%, #080e09 45%, #14271a 76%, #21452c 100%) !important;
+                background: linear-gradient(
+                    180deg,
+                    #000000 0%,
+                    #080e09 45%,
+                    #14271a 76%,
+                    #21452c 100%
+                ) !important;
                 background-attachment: scroll !important; /* Asegura que el negro empiece arriba de esta sección */
                 margin-bottom: 0 !important;
             }
@@ -280,12 +324,21 @@
                 color: #ffffff !important;
                 border: 1px solid rgba(255, 255, 255, 0.6) !important;
                 background-color: transparent !important;
-                transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+                transition:
+                    background-color 0.25s ease,
+                    color 0.25s ease,
+                    border-color 0.25s ease;
             }
             .btn-contacto:hover {
                 background-color: #ffffff !important;
                 color: #3b7bb3 !important;
                 border-color: #ffffff !important;
+            }
+            /* Ocultar el logo fijo en pantallas pequeñas / celulares (ancho menor a 800px) */
+            @media screen and (max-width: 800px) {
+                #logo-fixed {
+                    display: none !important;
+                }
             }
         </style>
 
@@ -311,7 +364,7 @@
                             href="https://wa.me/5491126183624"
                             target="_blank"
                             class="button wide btn-contacto"
-                            >+54 11 2618 3624</a
+                            >+54 9 11 2618 3624</a
                         >
                     </li>
                 </ul>
@@ -642,14 +695,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                 <li>
                     <a
                         href="#"
-                        class="icon brands alt fa-twitter"
-                        style="color: #ffffff !important"
-                        ><span class="label">Twitter</span></a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
                         class="icon brands alt fa-facebook-f"
                         style="color: #ffffff !important"
                         ><span class="label">Facebook</span></a
@@ -666,17 +711,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                 <li>
                     <a
                         href="#"
-                        class="icon brands alt fa-github"
+                        class="icon brands alt fa-linkedin-in"
                         style="color: #ffffff !important"
-                        ><span class="label">GitHub</span></a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="mailto:info@segag.com.ar"
-                        class="icon solid alt fa-envelope"
-                        style="color: #ffffff !important"
-                        ><span class="label">Email</span></a
+                        ><span class="label">LinkedIn</span></a
                     >
                 </li>
             </ul>
@@ -702,5 +739,68 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            (function () {
+                var logoFixed = document.getElementById("logo-fixed");
+                var logoSlot = document.getElementById("logo-slot");
+
+                if (!logoFixed || !logoSlot) {
+                    console.warn("Logo: faltan #logo-fixed o #logo-slot");
+                    return;
+                }
+
+                // ---- Ajustes ----
+                var LOGO_WIDTH = 120; // Ancho del logo en la esquina (px) - Podés subirlo si querés más grande
+                var TOP_POS = 16; // Distancia desde el borde superior (px)
+                var LEFT_POS = 16; // Distancia desde el borde izquierdo (px)
+                var OPACITY = 0.75; // Nivel de transparencia
+                // -----------------
+
+                // Configuramos los estilos fijos del logo flotante de la esquina
+                logoFixed.style.position = "fixed";
+                logoFixed.style.top = TOP_POS + "px";
+                logoFixed.style.left = LEFT_POS + "px";
+                logoFixed.style.width = LOGO_WIDTH + "px";
+                logoFixed.style.height = "auto";
+                logoFixed.style.opacity = OPACITY;
+                logoFixed.style.transition =
+                    "opacity 0.3s ease, visibility 0.3s ease";
+                logoFixed.style.transform = "none";
+                logoFixed.style.visibility = "hidden";
+
+                // Aseguramos que el logo del header vuelva a ser visible normalmente
+                logoSlot.style.opacity = "1";
+                logoSlot.style.visibility = "visible";
+
+                function checkVisibility() {
+                    var rect = logoSlot.getBoundingClientRect();
+
+                    // Si la parte inferior del logo del header está por encima de la pantalla (o sea, ya no se ve)
+                    if (rect.bottom < 0) {
+                        logoFixed.style.visibility = "visible";
+                        logoFixed.style.opacity = OPACITY;
+                    } else {
+                        logoFixed.style.opacity = "0";
+                        logoFixed.style.visibility = "hidden";
+                    }
+                }
+
+                var ticking = false;
+                function onScroll() {
+                    if (!ticking) {
+                        requestAnimationFrame(function () {
+                            checkVisibility();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }
+
+                window.addEventListener("scroll", onScroll, { passive: true });
+                window.addEventListener("resize", checkVisibility);
+                window.addEventListener("load", checkVisibility);
+                checkVisibility();
+            })();
+        </script>
     </body>
 </html>
