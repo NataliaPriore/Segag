@@ -3140,9 +3140,9 @@ button:disabled,
         /* Degradado horizontal en lugar de diagonal */
         linear-gradient(
                 0deg,
-                #000000 0%,
-                #333333 15%,
-                #666666 30%,
+                #0c0c0c 0%,
+                #3a4d37 15%,
+                #41884a 30%,
                 #4fa49a 65%,
                 #4361c2 100%
             );
